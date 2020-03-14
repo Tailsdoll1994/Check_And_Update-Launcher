@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 
@@ -79,6 +78,8 @@ namespace CheckAndUpdate
                         else
                         {
                             Console.WriteLine("У вас установлена последняя версия");
+                            Process.Start(Environment.CurrentDirectory + "\\Game\\Forge.exe");
+                            Environment.Exit(0);
                         }
                     }
                 }
