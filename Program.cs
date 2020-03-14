@@ -74,7 +74,7 @@ namespace CheckAndUpdate
                                 byte[] json_byte = Encoding.Default.GetBytes(list["version"].Replace("version:", ""));
                                 fstreamsave.Write(json_byte, 0, json_byte.Length);
                             }
-                            DownloadFile(list["url"], Environment.CurrentDirectory);
+                            DownloadFile(list["url"]);
                         }
                         else
                         {
@@ -88,7 +88,7 @@ namespace CheckAndUpdate
                 Console.WriteLine("Не возможно получить ответ с указаного сайта");
             }
         }
-        public static async void DownloadFile(string url, string path)
+        public static async void DownloadFile(string url)
         {
             Console.WriteLine("Производим загрузку обновления, пожалуйста подождите");
             byte[] data;
